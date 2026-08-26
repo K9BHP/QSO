@@ -1625,7 +1625,7 @@ jQuery(document).ready( function() {
 
   <ul class="tray">
     		
-    <li>&nbsp;11:47:00 UTC 1 Jun 2017&nbsp;</li>
+    <span id="utc-clock"></span>
   </ul>
   <ul class="primary-navigation">
       <li class="leaf" onClick="return true">
@@ -2751,6 +2751,20 @@ KEY</span></span></h3>
 </div>
 </div>
 </div>
+
+<script>
+function updateUTCClock() {
+    const now = new Date();
+
+    const time = now.toUTCString()
+        .replace('GMT', 'UTC');
+
+    document.getElementById('utc-clock').textContent = time;
+}
+
+updateUTCClock();
+setInterval(updateUTCClock, 1000);
+</script>
 
 
 </body>
