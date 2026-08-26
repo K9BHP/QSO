@@ -1764,6 +1764,42 @@ jQuery(document).ready( function() {
 
 <div style="text-align: center;">
 	<span class="yel"><span class="auto-style38">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+	
+	<div id="last-updated">
+  Updated: <span id="update-date"></span>
+</div>
+
+<script>
+function updateDateTime() {
+  const now = new Date();
+
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  };
+
+  document.getElementById('update-date').textContent =
+    now.toLocaleString('en-US', options);
+}
+
+updateDateTime();
+</script>
+
+
+
+	
+	
+	
+	
+	
+	
+	
 	</span><span class="auto-style45">Updated: 8/1/2026</span><span class="auto-style38"><br />
 	</span></span>
 	<br />
@@ -2752,21 +2788,7 @@ KEY</span></span></h3>
 </div>
 </div>
 
-Last updated <span id="utc-clock"></span>
 
-
-<script>
-function updateUTCClock() {
-    const now = new Date();
-
-    const time = now.toUTCString()
-        .replace('GMT', 'UTC');
-
-    document.getElementById('utc-clock').textContent = time;
-}
-
-updateUTCClock();
-setInterval(updateUTCClock, 1000);
 </script>
 
 
