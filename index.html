@@ -2808,6 +2808,29 @@ KEY</span></span></h3>
 
 </script>
 
+<script>
+function updateUTCClock() {
+    const now = new Date();
+
+    const time = String(now.getUTCHours()).padStart(2, '0') + ':' +
+                 String(now.getUTCMinutes()).padStart(2, '0') + ':' +
+                 String(now.getUTCSeconds()).padStart(2, '0');
+
+    const day = now.getUTCDate();
+    const month = now.toLocaleString('en-US', {
+        month: 'short',
+        timeZone: 'UTC'
+    });
+    const year = now.getUTCFullYear();
+
+    document.getElementById('utc-clock').textContent =
+        time + ' UTC ' + day + ' ' + month + ' ' + year;
+}
+
+updateUTCClock();
+setInterva
+
+
 
 </body>
 </html>
