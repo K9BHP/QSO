@@ -1625,7 +1625,7 @@ jQuery(document).ready( function() {
 
   <ul class="tray">
     		
-    <li>&nbsp;11:47:00 UTC 1 Jun 2017&nbsp;</li>
+    <span id="utc-clock"></span>
   </ul>
   <ul class="primary-navigation">
       <li class="leaf" onClick="return true">
@@ -1764,7 +1764,60 @@ jQuery(document).ready( function() {
 
 <div style="text-align: center;">
 	<span class="yel"><span class="auto-style38">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	</span><span class="auto-style45">Updated: 8/1/2026</span><span class="auto-style38"><br />
+	
+	
+	
+
+<script>
+function updateDateTime() {
+  const now = new Date();
+
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  };
+
+  document.getElementById('update-date').textContent =
+    now.toLocaleString('en-US', options);
+}
+
+updateDateTime();
+</script>
+
+
+
+	<script>
+function updateDateTime() {
+  const now = new Date();
+
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  };
+
+  document.getElementById('update-date').textContent =
+    now.toLocaleString('en-US', options);
+}
+
+updateDateTime();
+</script>
+	
+	
+	
+	
+	
+	
+	
 	</span></span>
 	<br />
 	<img alt="" height="400" src="ani_cross2.gif" width="272" /><br />
@@ -2751,6 +2804,22 @@ KEY</span></span></h3>
 </div>
 </div>
 </div>
+
+
+<script>
+function updateUTCClock() {
+    const now = new Date();
+
+    const time = now.toUTCString()
+        .replace('GMT', 'UTC');
+
+    document.getElementById('utc-clock').textContent = time;
+}
+
+updateUTCClock();
+setInterval(updateUTCClock, 1000);
+</script>
+
 
 
 </body>
