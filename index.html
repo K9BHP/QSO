@@ -183,14 +183,7 @@ margin: 5px 30px 5px 5px;
 display: none;
 }
 
-<div style="font-family: sans-serif; text-align: center; margin: 20px 0;">
-  <h1 id="warm-greeting" style="font-size: 2.5rem; color: #222; font-weight: 700; margin-bottom: 5px;">
-    Hello!
-  </h1>
-  <p id="warm-subtext" style="font-size: 1.2rem; color: #555; margin-top: 0;">
-    Thanks for stopping by.
-  </p>
-</div>
+
 
 .active-calls-list {
 	text-align: center;
@@ -1433,6 +1426,59 @@ var bqu=234433;
 </head>
 
 <body>
+
+
+
+<div style="font-family: sans-serif; text-align: center; margin: 20px 0;">
+  <h1 id="warm-greeting" style="font-size: 2.5rem; color: #222; font-weight: 700; margin-bottom: 5px;">
+    Hello!
+  </h1>
+  <p id="warm-subtext" style="font-size: 1.2rem; color: #555; margin-top: 0;">
+    Thanks for stopping by.
+  </p>
+</div>
+
+<script>
+  (function() {
+    // 1. Get the current hour of the visitor's local time (0 - 23)
+    const currentHour = new Date().getHours();
+    
+    // 2. Define our target elements
+    const greetingHeading = document.getElementById('warm-greeting');
+    const greetingSubtext = document.getElementById('warm-subtext');
+    
+    // 3. Variables to hold our text strings
+    let mainGreeting = "Hi there!";
+    let customSubtext = "So glad you dropped by today. Take a look around!";
+
+    // 4. Change the messages depending on the time of day
+    if (currentHour >= 5 && currentHour < 12) {
+      // Morning (5:00 AM - 11:59 AM)
+      mainGreeting = "Good morning! ☕";
+      customSubtext = "Hope your day is starting off great. Welcome to my corner of the web!";
+    } else if (currentHour >= 12 && currentHour < 17) {
+      // Afternoon (12:00 PM - 4:59 PM)
+      mainGreeting = "Good afternoon! 👋";
+      customSubtext = "Thanks for taking a break with me today. Make yourself at home.";
+    } else if (currentHour >= 17 && currentHour < 22) {
+      // Evening (5:00 PM - 9:59 PM)
+      mainGreeting = "Good evening! ✨";
+      customSubtext = "Unwinding for the day? Cozy up and enjoy your stay here.";
+    } else {
+      // Late Night (10:00 PM - 4:59 AM)
+      mainGreeting = "Hey there, night owl! 🦉";
+      customSubtext = "Burning the midnight oil? Thanks for stopping by to check things out.";
+    }
+
+    // 5. Inject the casual greetings seamlessly into your website layout
+    greetingHeading.innerText = mainGreeting;
+    greetingSubtext.innerText = customSubtext;
+  })();
+</script>
+
+
+
+
 
 
 <div id="top"><!-- begin qrztop -->
