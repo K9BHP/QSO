@@ -1625,6 +1625,7 @@ jQuery(document).ready( function() {
 
   <ul class="tray">
     		
+    <li id="time-greeting" aria-live="polite">Good evening, how is your night?</li>
     <li id="utc-clock" aria-live="polite">UTC: --:--:--</li>
   </ul>
   <ul class="primary-navigation">
@@ -1785,7 +1786,7 @@ jQuery(document).ready( function() {
 	
 	
 	
-	</span><span class="auto-style45">&nbsp;Updated: 8/26/2026</span></span><br />
+	</span><span class="auto-style45">&nbsp;Updated: 9/5/2026</span></span><br />
 	<img alt="" height="400" src="ani_cross2.gif" width="272" /><br />
 	<span class="auto-style93">
 	<span class="auto-style23"><span class="yel">
@@ -1971,8 +1972,7 @@ jQuery(document).ready( function() {
 	</span><strong><span class="yel">
 	<span class="auto-style93">
 	<br />
-	My German name is Bernd.<br />
-	My English name is Ben.<br />
+	My name is Ben.<br />
 	</span>
 	</span><span class="auto-style112"><br />
 	<br />
@@ -2774,7 +2774,18 @@ KEY</span></span></h3>
 
 
 <style>
-/* K9BHP live UTC clock */
+/* K9BHP greeting and live UTC clock */
+#time-greeting {
+    display: inline-block !important;
+    padding: 2px 10px;
+    margin: 0 10px 0 0 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #000000 !important;
+    white-space: nowrap;
+}
 #utc-clock {
     display: inline-block !important;
     min-width: 250px;
@@ -2794,21 +2805,34 @@ KEY</span></span></h3>
 </style>
 <script>
 (function () {
-    function updateUTCClock() {
+    function two(n) { return n < 10 ? '0' + n : String(n); }
+
+    function updateGreetingAndUTC() {
+        var greeting = document.getElementById('time-greeting');
         var clock = document.getElementById('utc-clock');
-        if (!clock) return;
-
         var now = new Date();
-        function two(n) { return n < 10 ? '0' + n : String(n); }
-        var hh = two(now.getUTCHours());
-        var mm = two(now.getUTCMinutes());
-        var ss = two(now.getUTCSeconds());
 
-        clock.textContent = 'UTC: ' + hh + ':' + mm + ':' + ss;
+        if (greeting) {
+            var hour = now.getHours();
+            if (hour >= 5 && hour < 12) {
+                greeting.textContent = 'Good morning, how is your day?';
+            } else if (hour >= 12 && hour < 18) {
+                greeting.textContent = 'Good afternoon, how is your day?';
+            } else {
+                greeting.textContent = 'Good evening, how is your night?';
+            }
+        }
+
+        if (clock) {
+            var hh = two(now.getUTCHours());
+            var mm = two(now.getUTCMinutes());
+            var ss = two(now.getUTCSeconds());
+            clock.textContent = 'UTC: ' + hh + ':' + mm + ':' + ss;
+        }
     }
 
-    updateUTCClock();
-    window.setInterval(updateUTCClock, 1000);
+    updateGreetingAndUTC();
+    window.setInterval(updateGreetingAndUTC, 1000);
 })();
 </script>
 
