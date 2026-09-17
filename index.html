@@ -2,16 +2,13 @@
 	PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
-
 <head>
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <title>K9BHP - Callsign Lookup by QRZ.COM</title>
 <meta name="description" content="World's leading amateur radio callsign database news, technical articles, K9BHP, online Logbook, discussion forums, practice licence exam tests, and technical data about ham radio." />
 <meta name="keywords" content="database, DX, ham radio, amateur radio, transmitters, test equipment, electronics, prototyping, scopes, meters, contesting, callsign, qrz, qth, qsl, cq, qrzcq, hamqth, logbook, LoTW, transmitters, antennas, forums" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="google-site-verification" content="6TK-JKZlwymcjLHzH9sO1D6GJEHWMRRRI60FLPpREC4" />
 <link href="https://s3.amazonaws.com/files.qrz.com/static/qrz/favicon.ico" rel="shortcut icon" />
 <link type="application/opensearchdescription+xml" href="/opensearch.xml" title="qrz.com" rel="search" />
@@ -206,7 +203,7 @@ display: none;
 	display: none;
 }
 .swap-list-container {
-	display: hidden;
+	display: none;
 	padding: 0px;
 	max-height: 560px;
 	overflow: hidden;
@@ -847,7 +844,7 @@ url('34489431080_a16e4914a4_h.jpg');
   background-attachment: fixed;
 background-size: 100% 990px;
    color: #ffffff;
-
+color:#ffc;
 font-size:25px;
 font-style:italic;
     letter-spacing: 2px;
@@ -965,12 +962,26 @@ filter:Glow(color=#000000,strength=1);
 .auto-style70 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.auto-style71 {
+	background-color: #FFFF00;
+	font-size: x-large;
+}
+.auto-style72 {
+	background-color: #FF3019;
+	color: #FFFF00;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 .auto-style74 {
 	font-size: xx-large;
 	color: #FF0000;
 }
 .auto-style79 {
 	color: #CD0A0A
+}
+.auto-style84 {
+	background-color: #00FFFF;
+	color: #88EAFF;
+	font-weight: normal;
 }
 .auto-style89 {
 	font-size: xx-large;
@@ -1126,6 +1137,14 @@ filter:Glow(color=#000000,strength=1);
 .auto-style166 {
 	margin-left: 0px;
 }
+.auto-style170 {
+	color: #AA0000;
+	font-size: xx-large;
+}
+.auto-style171 {
+	color: #AA0000;
+	font-size: x-large;
+}
 .auto-style172 {
 	color: #AED0EA
 }
@@ -1160,6 +1179,9 @@ filter:Glow(color=#000000,strength=1);
 .auto-style186 {
 	font-size: xx-large;
 	text-decoration: underline;
+}
+.auto-style187 {
+	background-color: #00FFFF;
 }
 </style>
 <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
@@ -1601,7 +1623,6 @@ jQuery(document).ready( function() {
 
 
   <ul class="tray">
-    		
     <li id="time-greeting" aria-live="polite">Good evening, how is your night?</li>
     <li id="utc-clock" aria-live="polite">UTC: --:--:--</li>
   </ul>
@@ -1645,7 +1666,7 @@ jQuery(document).ready( function() {
 		</ul>
 	      </li>
 	    
-	  <li class="leaf last" onclick="return true">K9BHP <ul class="sub">   <li class="leaf"><a href="http://k9bhp.info/K9BHP/k9bhp.html">K9BHP page...</a></li>   <li class="leaf"><a href="https://www.qrz.com/edit/K9BHP" rel="nofollow">Edit K9BHP</a></li>   <li class="leaf"><a href="https://forums.qrz.com/index.php?conversations/" rel="nofolow">Messages (0 new)</a></li>   <li class="leaf"><a href="https://logbook.qrz.com" rel="nofolow"><strong>My Logbook</strong></a></li>   <li class="leaf"><a href="https://www.qrz.com/manager" rel="nofolow">My Account</a></li>   <li class="leaf seperator"><hr></li>   <li class="leaf"><a href="https://www.qrz.com/logout">Logout</a></li> </ul></li>
+	  <li class="leaf last" onclick="return true">K9BHP <ul class="sub">   <li class="leaf"><a href="http://k9bhp.info/K9BHP/k9bhp.html">K9BHP page...</a></li>   <li class="leaf"><a href="https://www.qrz.com/edit/K9BHP" rel="nofolow">Edit K9BHP</a></li>   <li class="leaf"><a href="https://forums.qrz.com/index.php?conversations/" rel="nofolow">Messages (0 new)</a></li>   <li class="leaf"><a href="https://logbook.qrz.com" rel="nofolow"><strong>My Logbook</strong></a></li>   <li class="leaf"><a href="https://www.qrz.com/manager" rel="nofolow">My Account</a></li>   <li class="leaf seperator"><hr></li>   <li class="leaf"><a href="https://www.qrz.com/logout">Logout</a></li> </ul></li>
 <span class="stretch"></span>    
   </ul>
 </nav>
@@ -1763,7 +1784,7 @@ jQuery(document).ready( function() {
 	
 	
 	
-	</span><span class="auto-style45">&nbsp;Updated: 9/7/2026</span></span><br />
+	</span><span class="auto-style45">&nbsp;Updated: 9/17/2026</span></span><br />
 	<img alt="" height="400" src="ani_cross2.gif" width="272" /><br />
 	<span class="auto-style93">
 	<span class="auto-style23"><span class="yel">
@@ -1778,7 +1799,7 @@ jQuery(document).ready( function() {
 	<span class="auto-style36">
 	<span class="yel">
 	<a href="https://www.biblegateway.com/passage/?search=John+14&amp;version=NIV">
-	<span class="auto-style179">JOHN 14:6</span></a></span></span></span></span><br />
+	<span class="auto-style179">John 14:6</span></a></span></span></span></span><br />
 	<br />
 	<br />
 	<span class="auto-style23"><span class="yel">Jesus sagt:</span></span><span class="auto-style179"><br />
@@ -1798,50 +1819,28 @@ jQuery(document).ready( function() {
 	</span>
 	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
 	<br />
-			<span class="auto-style93">
-	<span class="yel">
-	
-	
-	
-	<a href="https://www.youtube.com/@BerndPfromm">
-
-	
-	
-	<img alt="K9BHP" height="593" src="bernd_rocking.jpg" width="410" class="auto-style131" /></a></span></span><br />
 	<br />
-	<span class="auto-style93">My name is Bernd. (Ben)<br />
-	<br />
-	I am a Christian first <br />
-	and a ham radio operator second.<br />
-	<br />
-	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /></span><br />
 	<br />
 	<a href="https://www.gty.org/memorial">
 	<img alt="John" class="auto-style183" height="312" src="john1.jpg" width="446" /></a><br />
 	<br />
-	<span class="auto-style184">Dr. John MacArthur has been a great Bible teacher 
-	for me for many years.<br />
-	I look&nbsp; forward to seeing 
-	John  in heaven.<br />
-	&nbsp;</span><br />
+	<span class="auto-style184">Dr. John McArthur has been a great Bible teacher 
+	for me for a number of years.<br />
+	I am looking forward to seeing 
+	John McArthur in heaven.<br />
+	<br />
+	</span>
+	<br />
 	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
 	<br />
 	<br />
-	
-	
-	
-	
-	
+	<br />
+	<a href="https://youtu.be/WlILURVJ5NE?si=azP8_6prUKMzirBe">
 	<img alt="" class="auto-style166" height="385" src="israel_1.jpg" width="428" /></a><br />
 	<br />
 	<br />
-	<br />
-	<br />
-	<br />
 	</span>
-			</span>
 			</strong>
-				<span class="auto-style6">
 	<span class="auto-style45"><span class="auto-style153"><strong>
 	<span class="auto-style23">Psalm 122:6</span><br class="auto-style23" />
 	<span class="auto-style23">Pray for the peace of Jerusalem:</span><br class="auto-style23" />
@@ -1897,7 +1896,7 @@ jQuery(document).ready( function() {
 	favor<br />
 	from the Lord, but one who sins against me, injures himself.<br />
 	All those who hate me love death.<br />
-	Proverbs 8:35-36</span><span class="yel"><br />
+	Proverbs 8:35-26</span><span class="yel"><br />
 	<br />
 	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /></span></span><span class="auto-style93"><span class="yel"><br />
 	<br />
@@ -1962,21 +1961,39 @@ jQuery(document).ready( function() {
 
 	
 	
+	<a href="https://www.youtube.com/@BerndPfromm">
+
+	
+	
+	<img alt="K9BHP" height="593" src="bernd_rocking.jpg" width="410" class="auto-style131" /></a></a><span class="yel"><span class="auto-style23">
+	</span>
+	</span><strong><span class="yel">
+	<span class="auto-style93">
 	<br />
-	</span><span class="red"><span class="auto-style38">
+	My name is Ben.<br />
+	</span>
+	</span><span class="auto-style112"><br />
 	<br />
+	</span></strong></span><span class="red"><span class="auto-style38">
+	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
 	<br />
-	</span>Here are a few of my German QSL cards, click on the DC1SAF QSL card 
-	bellow.<br />
-	<span class="auto-style23">Please check back sometime.</span><br class="auto-style23" />
-&nbsp;<span class="auto-style23">I am gradually building a QSL ALBUM containing my 
-	entire  collection...</span></span></strong></span><span class="red"><strong><span class="auto-style93"><br class="auto-style23" />
+	</span>Here are a few of my Germany QSL cards<br />
+	<span class="auto-style109">Check back sometime.</span><br />
+&nbsp;<span class="auto-style187">I am building up a QSL ALBUM over time of my 
+	ENTIRE collection...</span></span></strong></span><span class="red"><strong><span class="auto-style93"><br />
 	<span class="auto-style38"><br />
 	<br />
 	<br />
 	<a href="https://photos.app.goo.gl/jizJuFzcUKTu6KU48">
 	<img alt="" height="444" src="dc1saf.jpg" width="653" /></a></span></span></strong></span><span class="auto-style93"><strong><br />
 	<br />
+	<p style="text-align: center;">
+	&nbsp;</p>
+	<p style="text-align: center;">
+	<a href="https://photos.app.goo.gl/jizJuFzcUKTu6KU48">
+	<font face="comic sans ms, cursive">
+	<span class="auto-style23"><span class="auto-style170">C</span><span class="auto-style171">LICK 
+	HERE TO SEE MY QSL CARD COLLECTION!</span></span></font></a></p>
 	<p style="text-align: center;">&nbsp;</p>
 
 	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br class="yel" /><strong><span class="auto-style7"><span class="auto-style6">
@@ -1984,13 +2001,13 @@ jQuery(document).ready( function() {
 	</span></span><span class="auto-style6"><br class="auto-style122" /></span>
 	</strong><span class="auto-style148"><strong><span class="auto-style23">I 
 	</span></strong></span><span class="auto-style145">
-	<span class="auto-style45"><span class="auto-style23">am a </span>
-	</span></span><span class="auto-style148"><strong>
-	<span class="auto-style127">cancer</span></strong></span><span class="auto-style145"><span class="auto-style45"><strong><span class="auto-style23"> 
+	<span class="auto-style45"><strong><span class="auto-style23">am a </span>
+	</strong></span></span><span class="auto-style148"><strong>
+	<span class="auto-style127">Cancer</span></strong></span><span class="auto-style145"><span class="auto-style45"><strong><span class="auto-style23"> 
 			survivor.</span><br class="auto-style23" />
 	<br class="auto-style23" /></strong></span></span>
 	<strong><span class="auto-style23">
-	<span class="auto-style148">From February 2021 until July 2021, I underwent 
+	<span class="auto-style148">From February 2021 until July 2021 I underwent 
 			</span>
 	<span class="auto-style126">
 			<a href="https://www.mayoclinic.org/tests-procedures/chemotherapy/about/pac-20385033">
@@ -1999,14 +2016,14 @@ jQuery(document).ready( function() {
 			</span></span></strong></span><span class="auto-style23">
 	<span class="auto-style45"><span class="red">
 	<a href="https://en.wikipedia.org/wiki/Lymphoma">
-	<span class="auto-style163">lymphoma</span></a></span><span class="auto-style145">, a cancer of the 
+	<span class="auto-style163">Lymphoma</span></a></span><span class="auto-style145">, a cancer of the 
 	lymph nodes.</span></span></span><span class="auto-style45"><span class="auto-style145"><br />
-	On top of that, in 2025 I developed<span class="auto-style9"> </span>
+	On top of that I developed<span class="auto-style9"> </span>
 	<a href="https://en.wikipedia.org/wiki/Meningioma">
-	<span class="auto-style9">meningioma</span></a> and had brain surgery.<br />
+	<span class="auto-style9">MENINGIOMA</span></a> and had brain surgery.<br />
 	I am currently recovering from the surgery.<br class="auto-style23" />
 	<br class="auto-style23" />
-	<p class="MsoNormal">"From the beginning, God gave me this promise:"</p>
+	<p class="MsoNormal">From the beginning, God gave me this promise:</p>
 	<span class="auto-style23">"Surely I know the plans I have 
 			for you, says the Lord,</span><br class="auto-style23" />
 	<span class="auto-style23">plans for your welfare and not for harm, to give you</span><br class="auto-style23" />
@@ -2017,7 +2034,7 @@ jQuery(document).ready( function() {
 	<span class="auto-style7"><span class="grnline">My Prayer: </span> 
 	<br class="grnline" />
 	<br class="grnline" />
-	<span class="grnline">Thank you, Heavenly Father, for healing me.</span><br class="grnline" /></span>
+	<span class="grnline">Thank you heavenly father for healing me.</span><br class="grnline" /></span>
 	<span class="grnline">
 	<span class="auto-style7">I praise your holy name.</span><span class="red"> </span>
 	</span>
@@ -2037,15 +2054,16 @@ jQuery(document).ready( function() {
 	<a href="https://www.youtube.com/@ShepherdKingPsalms">
 	<img alt="" height="388" src="heal.jpg" width="568" /></a></span><p class="auto-style74">
 	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /></p>
-	<p class="auto-style74">&nbsp;</p>
+	<p class="auto-style74"><a href="https://www.n9rjv.org/">
+	<img alt="SARC" height="170" src="sarc.png" width="374" /></a></p>
 	<p class="auto-style74">
-	&nbsp;</p>
+	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /></p>
 	<p class="auto-style74"><span class="auto-style6"></p>
 	<p>&nbsp;</p>
 	<p><a href="https://www.gty.org/">
-	<img alt="John MacArthur" height="340" src="gty_3.png" width="730" /></a></p>
+	<img alt="John McArthur" height="340" src="gty_3.png" width="730" /></a></p>
 	</span>
-	<p class="auto-style45">Please visit the GTY website </p>
+	<p class="auto-style45">Please visit GTY'S Website </p>
 	<span class="auto-style6">
 	<p><img alt="" height="47" src="coax_cable_1099.gif" width="655" /></p>
 	</span>
@@ -2055,11 +2073,11 @@ jQuery(document).ready( function() {
 	<span class="auto-style93">
 	<span class="auto-style6"><span class="auto-style107">WHEN GOD </span>
 	<span class="auto-style79"><span class="auto-style161"><strong>
-	<span class="auto-style23">ABANDONS</span></strong></span></span><span class="auto-style57"><span class="auto-style107">
+	<span class="auto-style23">ABANDONES</span></strong></span></span><span class="auto-style57"><span class="auto-style107">
 	</span></span><span class="auto-style38"><span class="auto-style36">A NATION</span></span><span class="auto-style89"><span class="auto-style181">
 	</span></span></p>
 	<span class="auto-style159">by 
-			Pastor John MacArthur</span></span></span><span class="auto-style7"><span class="auto-style6"><span class="auto-style93"></h5>
+			Pastor John McArthur</span></span></span><span class="auto-style7"><span class="auto-style6"><span class="auto-style93"></h5>
 	<center></center></span></span></span><span class="auto-style93"><span class="auto-style7">
 	<span class="auto-style98">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/Cz8AA_Oa0EU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -2070,8 +2088,8 @@ jQuery(document).ready( function() {
 	<span lang="DE" style="font-size:18.0pt;line-height:107%;
 mso-ansi-language:DE" class="auto-style146">Wenn Gott ein Volk </span>
 	<span style="font-size:18.0pt;line-height:107%;
-mso-ansi-language:DE" class="auto-style146"></span><span lang="DE" style="font-size:18.0pt;line-height:107%;
-mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
+mso-ansi-language:DE" class="auto-style146">ver</span><span lang="DE" style="font-size:18.0pt;line-height:107%;
+mso-ansi-language:DE" class="auto-style146">lässt.<o:p></o:p></span></p>
 	<br />
 	<br />   
 	
@@ -2092,7 +2110,7 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 	<strong>
 		<span class="auto-style23">
 		<a href="https://www.gotquestions.org/top20.html">
-		<span class="auto-style146">Got questions about God, Jesus, and the 
+		<span class="auto-style146">Got questions about God, Jesus and the 
 				Bible?</span></a></span></strong></blockquote>
 	</span>
 	<br /><span class="auto-style38">
@@ -2145,34 +2163,33 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 			<a href="https://www.christiananswersnewage.com/article/pokemon-of-animism-and-occultism">
 			<img alt="" height="155" src="cna.gif" width="156" /></a></h3>
 	<h3 class="auto-style147">Christian Answers for the New Age</h3>
-	<h3><img alt="" height="47" src="coax_cable_1099.gif" width="655" /><strong><span class="auto-style7"><span class="auto-style6"><br />
-	</span></span>
-				</strong></span></span></h3>
-	<strong>
-	<h2><span class="auto-style189"><span class="auto-style188">HAM RADIO</h2>
+	<h3><img alt="" height="47" src="coax_cable_1099.gif" width="655" /></h3>
+	<h3>&nbsp;</h3>
+	<h3>&nbsp;<span class="auto-style7"><span class="auto-style71"><span class="auto-style72"><a href="https://www.youtube.com/playlist?list=PLmp4kC3-C1MX4mrWXG_hsxsveG454ccye"><span class="auto-style84"><strong><span class="auto-style156">CLICK 
+			HERE TO SEE SOME OF OUR PICTURES</span></strong></span></a></span></span></h3>
+	<strong><br />
+	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
+	<span class="auto-style6">
+	
 	<br />
-	</span></span>
-			<span class="auto-style93"><span class="auto-style6"><span class="auto-style7">
 	<br />
 	<a href="http://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!">
-	<img src="http://www.hamqsl.com/solar101vhf.php"></a><br />
-	<br />
-	<span class="auto-style115">SOLAR TERRESTRIAL DATA</span><br />
-	<br />
-	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
+	<img src="http://www.hamqsl.com/solar101vhf.php"></a> <br /><br /></span>
+	</strong></span><strong><span class="auto-style115">SOLAR TERRESTRIAL DATA</span><span class="auto-style7"><span class="auto-style6"><br class="auto-style23" />
+	<br /><img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
 	</center>
 	<div style="text-align: center;">
 		<a href="https://rsgb.org/main/operating/dx-code-of-conduct/">
 		<img alt="" src="DXCode_Logo_small.png" style="height:196px; width:200px" /></a><br />
 		<span style="font-family:comic sans ms,cursive">
 		<span style="font-size:20px"><br />
-		<img alt="" height="47" src="coax_cable_1099.gif" width="655" /></span></span></span></span><strong><span class="auto-style7"><span class="auto-style6"><span class="auto-style55"><span style="color:##fefa02" class="auto-style1"><center>
+		<img alt="" height="47" src="coax_cable_1099.gif" width="655" /></span></span></span><strong><span class="auto-style6"><span class="auto-style55"><span style="color:#fefa02" class="auto-style1"><center>
 		</center><br />
 		<br />
 		<img alt="NO FT8" height="225" longdesc="Thanks a lot..." src="ft8.jpeg" width="225" /><br />
 		<br />
 		<br />
-		</span><span style="color:##fefa02" class="yel">- NO FT8 -<br />
+		</span><span style="color:#fefa02" class="yel">- NO FT8 -<br />
 		<br />
 		Excuse me?<br />
 		<br />
@@ -2180,28 +2197,28 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 		<img alt="" height="192" src="contest.jpg" width="429" /><br />
 		<br />
 		EXCUSE ME?<br />
-		<img alt="coax" height="47" src="coax_cable_1099.gif" width="655" /></span><span style="color:fefa02" class="auto-style1"><br/>
+		<img alt="coax" height="47" src="coax_cable_1099.gif" width="655" /></span><span style="color:#fefa02" class="auto-style1"><br />
 		<br />
 		<br /><a href="https://pskreporter.info/pskmap.html">
 		<img alt="" height="373" src="PSK_2.jpg" width="777" /></a><br /><br />
 		</span></span>
 		</span>
 		<span class="auto-style140">
-		<span style="color:##fefa02" class="auto-style159">See DIGITAL 
+		<span style="color:#fefa02" class="auto-style159">See DIGITAL 
 				MODE connections 
-	worldwide</span></span><span class="auto-style6"><span style="color:##fefa02" class="auto-style1"><span class="auto-style39"><br />
+	world wide</span></span><span class="auto-style6"><span style="color:#fefa02" class="auto-style1"><span class="auto-style39"><br />
 		<br /><span style="font-family:comic sans ms,cursive">
 		<span style="font-size:20px">
 		<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
 		<br /><a href="http://www.dstarinfo.com/">
 		<img alt="D-STAR" height="268" src="D-Star1.png" width="623" /></a><br />
-		</span></span></span></span><span style="color:##fefa02" class="yel">
+		</span></span></span></span><span style="color:#fefa02" class="yel">
 		<span class="auto-style43"><span class="auto-style45">
-		<span class="auto-style23">I just purchased a DVmega DV Stick 30 dongle 
-				</span><br class="auto-style23" />
-		<span class="auto-style23">for DMR, D-Star, and C4FM FUSION access.</span><br class="auto-style23" />
+		<span class="auto-style23">I just purchased a DVmega Dongle 
+				DVstick 30 </span><br class="auto-style23" />
+		<span class="auto-style23">for DMR, D-Star and C4FM FUSION access.</span><br class="auto-style23" />
 		</span></span></span><span style="font-size:20px">
-		<span class="auto-style39"><span style="color:##fefa02" class="yel">
+		<span class="auto-style39"><span style="color:#fefa02" class="yel">
 		<br class="auto-style23" /><br />
 		<br />
 		</span></span></span>
@@ -2229,12 +2246,12 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 		</span>
 		<span class="auto-style39"><span style="font-size:20px">
 		<span class="auto-style6">
-		<span style="color:##fefa02" class="auto-style1"><br /><br />&nbsp;<span class="auto-style7"><span style="color:##fefa02" class="auto-style1"><span style="font-size:20px"><img alt="" height="357" src="DONGLE.png" width="654" class="auto-style105" /></span></span></span><br />
+		<span style="color:#fefa02" class="auto-style1"><br /><br />&nbsp;<span class="auto-style7"><span style="color:#fefa02" class="auto-style1"><span style="font-size:20px"><img alt="" height="357" src="DONGLE.png" width="654" class="auto-style105" /></span></span></span><br />
 		<img alt="" height="438" src="BLUE_DV1.png" width="977" /><br /><br />
-		</span><span style="color:02" class="auto-style36">BlueDV for Windows 
-		</span><span style="color:#f#fefaefa02" class="auto-style1"><br />
+		</span><span style="color:#fefa02" class="auto-style36">BlueDV for Windows 
+		</span><span style="color:#fefa02" class="auto-style1"><br />
 		<span class="auto-style7">
-		<span style="color:##fefa02" class="auto-style1">
+		<span style="color:#fefa02" class="auto-style1">
 		<span style="font-size:20px"><CENTER></CENTER></span></span></span>
 		<br /><br /></center>
 				<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
@@ -2245,42 +2262,42 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 		</span></span><span class="auto-style7">
 		<span class="auto-style6"><span class="auto-style70">
 		<span class="auto-style1"><span class="auto-style46">Free lightning maps 
-	and apps</span></span></span><span class="auto-style17"><span style="color:##fefa02" class="auto-style1"><span class="auto-style39"><br class="auto-style65" />
-		</span></span></span><span style="color:##fefa02" class="auto-style1">
-		<span style="color:##fefa02" class="auto-style1">
+	and apps</span></span></span><span class="auto-style17"><span style="color:#fefa02" class="auto-style1"><span class="auto-style39"><br class="auto-style65" />
+		</span></span></span><span style="color:#fefa02" class="auto-style1">
+		<span style="color:#fefa02" class="auto-style1">
 		<span class="auto-style39">
-		<span style="color:##fefa02" class="auto-style1">
+		<span style="color:#fefa02" class="auto-style1">
 		<span class="auto-style39">
 		<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
 		<br /><br /><a href="http://rigpix.com">
 		<img alt="rigpix" height="101" longdesc="rigpix" src="pix.jpg" width="265" /></a><br />
 		<span class="auto-style14"><br /><br /></span>
-		<span style="color:##fefa02" class="yel"><span class="auto-style23">
-		<span class="auto-style66" style="font-family: verdana; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: -webkit-center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">A</span></span></span></span></span></span></span></span></span></strong><span class="auto-style7"><span class="auto-style6"></span><strong><span style="color:##fefa02" class="auto-style1"><span style="color:#fefa02" class="auto-style1"><span style="color:##fefa02" class="yel"><span class="auto-style23"><span class="auto-style43"><span class="auto-style93"><span class="yel" style="font-family: verdana; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: -webkit-center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"> multi-gigabyte source of 
+		<span style="color:#fefa02" class="yel"><span class="auto-style23">
+		<span class="auto-style66" style="font-family: verdana; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: -webkit-center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">A</span></span></span></span></span></span></span></span></span></strong><span class="auto-style7"><span class="auto-style6"></span><strong><span style="color:#fefa02" class="auto-style1"><span style="color:#fefa02" class="auto-style1"><span style="color:#fefa02" class="yel"><span class="auto-style23"><span class="auto-style43"><span class="auto-style93"><span class="yel" style="font-family: verdana; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: -webkit-center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"> multi-gigabyte source of 
 	information and pictures </span></span></span></span>
 		<span class="auto-style43"><span class="auto-style93">
 		<span class="yel" style="font-family: verdana; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: -webkit-center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
-		<br class="auto-style23" /><span class="auto-style23">of radios, accessories and more</span></span></span></span></span><span class="auto-style6"><span class="auto-style39"><span style="color:02" class="auto-style1"><br class="auto-style16" />
+		<br class="auto-style23" /><span class="auto-style23">of radios, accessories and more</span></span></span></span></span><span class="auto-style6"><span class="auto-style39"><span style="color:#fefa02" class="auto-style1"><br class="auto-style16" />
 		<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
 		</span></span></span></span></span><span class="auto-style6">
 		<span class="auto-style39">
-		<span style="color:##fefa02" class="auto-style1"><br />
+		<span style="color:#fefa02" class="auto-style1"><br />
 		<a href="http://www.voacap.com/">
-		<img alt="" height="250" src="propagation.jpg" width="553" /></a></span></span></span></strong></span></span><span class="auto-style7"><strong><span class="auto-style6"><span style="color:##fefa02" class="auto-style1"><span style="color:##fefa02" class="auto-style1"><span style="color:##fefa02" class="auto-style1"><span class="auto-style43"><p class="MsoNormal">
+		<img alt="" height="250" src="propagation.jpg" width="553" /></a></span></span></span></strong></span></span><span class="auto-style7"><strong><span class="auto-style6"><span style="color:#fefa02" class="auto-style1"><span style="color:#fefa02" class="auto-style1"><span style="color:#fefa02" class="auto-style1"><span class="auto-style43"><p class="MsoNormal">
 		<span class="auto-style19" lang="EN-US"><strong>
 		<span class="auto-style61">VOACAP</span></strong></span></p>
 		</span></span></span></span><span class="auto-style95">
 		<p class="MsoNormal"><strong><span class="auto-style94">PROPAGATION PREDICTION 
 					AND AZIMUTH</span></strong></p>
-		</span><span style="color:##fefa02" class="auto-style1">
+		</span><span style="color:#fefa02" class="auto-style1">
 		<span style="color:#fefa02" class="auto-style1">
 		<span style="font-size:20px"><span class="auto-style39">
 		<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
 		<a href="http://dxmaps.com">
 		<img alt="" height="325" src="dxmaps.jpg" width="434" /></a><br /><br />
 		</span></span></span></span><span class="auto-style39">
-		<span style="color:##fefa02" class="yel"><span class="auto-style69">
-		<span class="auto-style23">DXMAPS - REAL TIME QSO's</span></span></span><span style="color:##fefa02" class="auto-style1"><br class="auto-style65" />
+		<span style="color:#fefa02" class="yel"><span class="auto-style69">
+		<span class="auto-style23">DXMAPS - REAL-TIME QSO'S</span></span></span><span style="color:#fefa02" class="auto-style1"><br class="auto-style65" />
 		<span style="font-size:20px"><br /></div>
 		</div>
 			<center>
@@ -2294,7 +2311,7 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 
 
 <div style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/QSwvg9Rv2EI" width="560"></iframe></div>
-#fefa
+
 
 			</span></span></span><span class="auto-style43">
 
@@ -2319,7 +2336,7 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 
 	</span></span></strong>
 				<span class="auto-style6"><span style="font-size:20px"><span class="auto-style39"><strong>
-	<span style="color:##fefa02" class="auto-style1">
+	<span style="color:#fefa02" class="auto-style1">
 
 
 
@@ -2353,18 +2370,14 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 	</strong>
 	</span>
 				</span>
-				</span>
-				</strong>
-			<span class="auto-style93">
-			<span class="auto-style93">
-			<strong><span class="auto-style7"><span class="auto-style7">
+				</strong><strong><span class="auto-style7"><span class="auto-style7">
 				<span class="auto-style119"><span class="auto-style23">The Glory Days of Shortwave Radio</span><br class="auto-style23" />
 	<br class="auto-style23" />
 	</span>
 	</span>
 				</span>
 				<span class="auto-style93">
-	<span class="auto-style146">I</span></span><span class="auto-style23"><span class="auto-style93"><span class="auto-style145">International 
+	<span class="auto-style146">I</span></span><span class="auto-style23"><span class="auto-style93"><span class="auto-style145">nternational 
 	Radio Broadcasts</span></span></span></strong><span class="auto-style7"><strong><span class="auto-style38"><br />
 	<br />
 	<img alt="" height="47" src="coax_cable_1099.gif" width="655" /><br />
@@ -2376,7 +2389,7 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 	<span class="auto-style7">
 	<strong>
 	<span class="auto-style7"><span class="auto-style6">
-	<span style="color:##fefa02" class="auto-style1"><span class="auto-style1">
+	<span style="color:#fefa02" class="auto-style1"><span class="auto-style1">
 	<span class="auto-style46">MY TRANSCEIVERS</span></span></span></p>
 	<p>
 	</span>
@@ -2391,7 +2404,7 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 	<span class="auto-style7">
 			<p>
 			<span class="auto-style6">
-			<span style="color:##fefa02" class="auto-style1">
+			<span style="color:#fefa02" class="auto-style1">
 			<span class="auto-style39"><span style="font-size:20px">
 	</p>
 	<h1 style="text-align:center" class="auto-style59">
@@ -2425,7 +2438,7 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 <h3 style="text-align:center"><span class="yel">
 <span class="auto-style64"><strong>KENWOOD TS-480 HX </strong></span></span></h3>
 	<h3 style="text-align:center"><span class="yel">
-	<span class="auto-style64"><strong>200 WATTS</strong></span></span></h3>
+	<span class="auto-style64"><strong>200 WATT</strong></span></span></h3>
 	<strong>
 	<p style="text-align:center">&nbsp;</p>
 
@@ -2520,8 +2533,8 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 				<span class="auto-style7">
 			<strong>
 				<span class="auto-style39">
-	<span style="color:02" class="yel">
-	</span>#fefa
+	<span style="color:#fefa02" class="yel">
+	</span>
 	<span style="color:#fefa02" class="auto-style1">
 	</span>
 	<span style="color:#fefa02" class="yel">
@@ -2542,7 +2555,7 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 	</span><span style="color:#fefa02" class="yel">
 	</span>
 	<span style="color:#fefa02" class="auto-style1">
-	<span class="auto-style43"><span style="color:##fefa02" class="yel">
+	<span class="auto-style43"><span style="color:#fefa02" class="yel">
 	</span></span>
 	<span style="font-family:comic sans ms,cursive">
 	<span class="auto-style39">
@@ -2555,7 +2568,7 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 
 <p><img alt="" src="coax_cable_1099.gif" style="height:47px; width:655px" /></p>
 
-<p><span style="color:##fefa02"><strong>WATCH THIS HEXBEAM SIMULATION!</strong></span></p>
+<p><span style="color:#fefa02"><strong>WATCH THIS HEXBEAM SIMULATION!</strong></span></p>
 
 <p><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/Z9ej8BDY5ck" width="560"></iframe></p>
 	<p>&nbsp;</p>
@@ -2564,7 +2577,7 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 	</span>
 	</span>
 	<strong><span class="auto-style43">
-	<p class="auto-style93">BUILD A 2- ELEMENT MOXON BEAM</p>
+	<p class="auto-style93">BUILD A 2 ELEMENT MOXON BEAM</p>
 	<p class="auto-style93">It only takes 2 hours!</p>
 
 	</span>
@@ -2647,10 +2660,7 @@ mso-ansi-language:DE" class="auto-style146">verlässt.<o:p></o:p></span></p>
 KEY</span></span></h3>
 
 			</span><span class="auto-style155">
-			<p style="text-align:center">It is with great sadness, that we announce the passing of Georg 
-			Ulm, </p>
-			<p style="text-align:center">W9EVT on December 21, 2022 has been 
-			announced.</span></p>
+			<p style="text-align:center">It is with great sadness that we announce the passing of Georg Ulm, W9EVT, on December 21, 2022.</p>
 
 			</strong>
 
@@ -2675,7 +2685,7 @@ KEY</span></span></h3>
 
 			</strong>
 
-			<p style="text-align: center;" class="auto-style113"><strong>We visited George, W9EVT, on 
+			<p style="text-align: center;" class="auto-style113"><strong>We visited George, W9EVT on 
 			Washington Island</strong></p>
 			<strong>
 			<span class="auto-style7">
@@ -2771,6 +2781,7 @@ KEY</span></span></h3>
     color: #000000 !important;
     white-space: nowrap;
 }
+/* K9BHP live UTC clock */
 #utc-clock {
     display: inline-block !important;
     min-width: 250px;
@@ -2786,13 +2797,6 @@ KEY</span></span></h3>
     border-radius: 4px;
     text-align: center;
     white-space: nowrap;
-}
-.auto-style188 {
-	color: #FF0;
-	font-size: xx-large;
-}
-.auto-style189 {
-	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 </style>
 <script>
